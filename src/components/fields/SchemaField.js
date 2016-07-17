@@ -32,7 +32,6 @@ function getFieldComponent(schema, uiSchema, fields) {
   if (typeof field === "string" && field in fields) {
     return fields[field];
   }
-  //override default type
   if (schema.type!="object" && schema.type in fields){
     return fields[schema.type];
   }
